@@ -1,0 +1,15 @@
+-- CreateTable
+CREATE TABLE "PricePoint" (
+    "id" TEXT NOT NULL,
+    "asset1" TEXT NOT NULL,
+    "asset2" TEXT NOT NULL,
+    "ask" DOUBLE PRECISION NOT NULL,
+    "askVolume" DOUBLE PRECISION NOT NULL,
+    "bid" DOUBLE PRECISION NOT NULL,
+    "bidVolume" DOUBLE PRECISION NOT NULL,
+    "volume24Hrs" DOUBLE PRECISION NOT NULL,
+    "weightedAverage24Hrs" DOUBLE PRECISION NOT NULL,
+    "created" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "PricePoint_pkey" PRIMARY KEY ("id")
+);

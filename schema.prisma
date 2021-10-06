@@ -1,0 +1,27 @@
+datasource db {
+  provider = "postgresql"
+  url = "postgresql://pi:pi@localhost:5432/crypto?schema=public"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model PricePoint {
+    id String @id @default(uuid())
+
+    asset1 String
+    asset2 String
+
+    ask Float
+    askVolume Float
+
+    bid Float
+    bidVolume Float
+
+    volume24Hrs Float
+
+    weightedAverage24Hrs Float
+
+    created DateTime  @default(now())
+}
