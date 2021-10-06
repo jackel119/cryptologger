@@ -12,7 +12,7 @@ const throttleTable = Object.fromEntries(PAIRS.map(p => ([p, moment().subtract({
 
 function shouldExecute(pairSymbol: string) {
 
-  if (throttleTable[pairSymbol].isBefore(moment().subtract({ seconds: 15 }))) {
+  if (throttleTable[pairSymbol].isBefore(moment().subtract({ seconds: 10 }))) {
     throttleTable[pairSymbol] = moment();
     return true;
   }

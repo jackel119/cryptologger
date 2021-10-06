@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url = "postgresql://pi:pi@localhost:5432/crypto?schema=public"
+  url = "postgresql://crypto:crypto@localhost:5432/crypto?schema=public"
 }
 
 generator client {
